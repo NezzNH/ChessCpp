@@ -8,13 +8,13 @@ class MoveStructures {
 private:
 	move_structure_type tp;
 	bool containsMoves;
-	int* moveOffsets;
+	coordPair* moveOffsets;
 	unsigned short moveOffsetSize;
 public:
 	MoveStructures();
 	~MoveStructures();
-	MoveStructures(int*, unsigned short, move_structure_type);
-	void initializeMoveSet(int*, unsigned short, move_structure_type);
+	MoveStructures(coordPair*, unsigned short, move_structure_type);
+	void initializeMoveSet(coordPair*, unsigned short, move_structure_type);
 };
 
 class Piece {

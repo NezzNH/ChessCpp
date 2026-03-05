@@ -28,7 +28,7 @@ MoveStructures::MoveStructures() {
 	moveOffsetSize = 0;
 }
 
-MoveStructures::MoveStructures(int* moveArray, unsigned short size, move_structure_type type) {
+MoveStructures::MoveStructures(coordPair* moveArray, unsigned short size, move_structure_type type) {
 	this->moveOffsetSize = size;
 	this->moveOffsets = moveArray;
 	this->containsMoves = true;
@@ -39,7 +39,7 @@ MoveStructures::~MoveStructures() {
 	free(moveOffsets);
 }
 
-void MoveStructures::initializeMoveSet(int* moveArray, unsigned short size, move_structure_type type) {
+void MoveStructures::initializeMoveSet(coordPair* moveArray, unsigned short size, move_structure_type type) {
 	this->moveOffsetSize = size;
 	this->moveOffsets = moveArray;
 	this->containsMoves = true;
