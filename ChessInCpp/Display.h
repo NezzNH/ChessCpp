@@ -7,7 +7,7 @@ enum display_mode { GAME, GAME_OVER, GAME_STARTING, MENU };
 
 class Display {
 private:
-	Board& board;
+	Board* board;
 	coordPair dimensions;
 
 	display_mode dspmd;

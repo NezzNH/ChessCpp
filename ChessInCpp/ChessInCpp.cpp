@@ -1,6 +1,7 @@
 ﻿#include "ChessInCpp.h"
 
 #include "Board.h"
+#include "Display.h"
 #include "coordPair.h"
 
 using namespace std;
@@ -9,6 +10,7 @@ int main()
 {
 	Board board;
 	coordPair temp;
+	Display dsp;
 
 	int a;
 

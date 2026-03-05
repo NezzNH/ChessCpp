@@ -1,10 +1,11 @@
 #include "Board.h"
+#include "Field.h"
 
 #include <cstdlib>
 
 Board::Board() {
 	this->dimensions = { 8, 8 }; //this is just how chess boards are usually structured, make this a constant defined per txtfile of game sesh
-	pieceArrayPointer = NULL;
+	pieceArrayPointer = nullptr;
 	pieceArraySize = 0;
 
 	this->fieldsSize.column = this->dimensions.column;
@@ -32,5 +33,5 @@ Board::~Board() {
 }
 
 bool Board::initGame() {
-	return false; //TO-DO
+	
 }

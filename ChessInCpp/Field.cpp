@@ -1,5 +1,7 @@
 #include "Field.h"
 
+#include <cstdlib>
+
 char Field::return_symbol() {
 	if (this->piece) return (*piece).displaySymbol;
 	else return ' ';
@@ -10,3 +12,7 @@ Field::Field(int row, int column) {
 }
 
 Field::Field() { coords.row = 0; coords.column = 0; }
+
+Field::~Field() {
+	free(this->piece);
+}

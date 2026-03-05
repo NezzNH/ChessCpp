@@ -24,28 +24,40 @@ void Display::refresh() {
 
 void Display::display_game() {
 
+	if (board == nullptr) return; //voodoo
+
 	coordPair temp = { 0, 0 };
 
-	for (int i = 0; i < dimensions.column; i++) std::cout << "  ";
+	for (int i = 0; i < dimensions.column; i++) std::cout << "==";
 		std::cout << "\n";
 	for (int i = 0; i < dimensions.row; i++) {
 		temp.row = i;
 		for (int j = 0; j < dimensions.column; j++) {
 			temp.column = j;
 			
-			std::cout << this->board.get_symbol_at(temp) << " ";
+			std::cout << this->board->get_symbol_at(temp) << " ";
 		}
 		std::cout << "\n";
 	}
 	
-	for (int i = 0; i < dimensions.column; i++) std::cout << "  "; //maybe remove this later
+	for (int i = 0; i < dimensions.column; i++) std::cout << "=="; //maybe remove this later
 		std::cout << "\n";
 
 }
 
 void Display::display_menu() {
 	std::cout << "chess game menu:\n\n\n\n\n";
+}
 
+void Display::display_game_over() {
+	std::cout << "game over\n\n\n\n";
+}
 
+void Display::display_game_starting() {
+	std::cout << "game starting\n\n\n\n\n\n";
+}
+
+Display::Display() {
+	this->board = nullptr;
 
 }
